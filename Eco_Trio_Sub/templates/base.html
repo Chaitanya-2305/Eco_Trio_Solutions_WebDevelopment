@@ -565,15 +565,17 @@
     <div class="relative profile-menu">
       {% if request.user.is_authenticated %}
         <!-- Logged in user -->
-        <button id="authBtn" class="bg-black text-white px-4 py-1 rounded font-semibold fs-1">
+       <button id="authBtn" class="ml-4 bg-green-600 hover:bg-green-700 text-white px-6 py-1 rounded-xl font-semibold text-lg shadow-md transition-all duration-300">
           {{ request.user.first_name }}
-        </button>
+       </button>
+
+
         <div id="authDropdown" class="hidden absolute right-0 mt-2 w-32 bg-black text-white rounded shadow-md z-50">
           <a href="{% url 'logout' %}" class="block px-4 py-2 hover:bg-gray hover:text-red-600">Logout</a>
         </div>
       {% else %}
         <!-- Not logged in -->
-        <button id="guestBtn" class="bg-black text-white px-4 py-1 rounded font-semibold">
+       <button id="guestBtn" class="ml-4 bg-green-600 hover:bg-green-700 text-white px-6 py-1 rounded-xl font-semibold text-lg shadow-md transition-all duration-300">
           Profile
         </button>
         <div id="guestDropdown" class="hidden absolute right-0 mt-2 w-32 bg-black text-white rounded shadow-md z-50">

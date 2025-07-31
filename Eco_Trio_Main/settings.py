@@ -62,7 +62,7 @@ ROOT_URLCONF = 'Eco_Trio_Main.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'Eco_Trio_Suba/templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'Eco_Trio_Sub/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -1,8 +1,16 @@
 from django.urls import path
-from .views import home_view, agri_services_view, signup_view, signin_view,send_otp,logout_view,register_view,submit_form,global_view, digital_grow, team_view,contact_view,collab_view,apply_view,subscribe_view  # Import your views here
+from django.views.generic import RedirectView
+from .views import( home_view, agri_services_view, signup_view, 
+                   signin_view,send_otp,logout_view,register_view,
+                   submit_form,global_view, digital_grow, team_view,
+                   contact_view,collab_view,apply_view,subscribe_view 
+                   
+                   ) # Import your views here
+
  # Make sure to import your actual view function
 urlpatterns = [
     #path('send-otp/', send_otp, name='send_otp'),
+    path('', RedirectView.as_view(url='/home/')),
     path('register/',register_view, name='register'),  # ✅ Use the function, not a string
     path('send-otp-email/', send_otp, name='send_otp_email'),
     path('submit/', submit_form, name='submit_form'),
